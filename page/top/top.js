@@ -1,3 +1,6 @@
+# top.js
+
+```javascript
 fetch("./top.json")
 .then(response => response.json())
 .then(data => {
@@ -20,20 +23,14 @@ fetch("./top.json")
     document.getElementById("youtubeLink").href =
         data.socials.youtube;
 
-    document.getElementById("discordLink").href =
-        data.socials.discord;
-
-    document.getElementById("xLink").href =
-        data.socials.x;
+    document.getElementById("groupLink").href =
+        data.socials.group;
 
     document.getElementById("youtubeLink2").href =
         data.socials.youtube;
 
-    document.getElementById("discordLink2").href =
-        data.socials.discord;
-
-    document.getElementById("xLink2").href =
-        data.socials.x;
+    document.getElementById("groupLink2").href =
+        data.socials.group;
 
     const memberList =
         document.getElementById("memberList");
@@ -47,11 +44,24 @@ fetch("./top.json")
                 <p>${member.rank}</p>
             </div>
         `;
+
     });
 
 });
 
-/* Theme */
+/* Theme Save */
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light");
+
+    document
+        .getElementById("themeToggle")
+        .textContent = "☀️";
+}
 
 const themeToggle =
     document.getElementById("themeToggle");
@@ -60,31 +70,46 @@ themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("light");
 
+    const isLight =
+        document.body.classList.contains("light");
+
     themeToggle.textContent =
-        document.body.classList.contains("light")
-        ? "☀️"
-        : "🌙";
+        isLight ? "☀️" : "🌙";
+
+    localStorage.setItem(
+        "theme",
+        isLight ? "light" : "dark"
+    );
+
 });
 
 /* Tabs */
 
-document.querySelectorAll(".tab-btn")
+document
+.querySelectorAll(".tab-btn")
 .forEach(button => {
 
     button.addEventListener("click", () => {
 
         document
-            .querySelectorAll(".tab-content")
-            .forEach(tab =>
-                tab.classList.remove("active")
-            );
+        .querySelectorAll(".tab-btn")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
 
         document
-            .getElementById(
-                button.dataset.tab
-            )
-            .classList.add("active");
+        .querySelectorAll(".tab-content")
+        .forEach(tab =>
+            tab.classList.remove("active")
+        );
+
+        document
+        .getElementById(button.dataset.tab)
+        .classList.add("active");
 
     });
 
 });
+```
