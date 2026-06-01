@@ -48,23 +48,31 @@ data.members.forEach(member => {
 
 })
 .catch(error => {
-console.error("JSON Load Error:", error);
+
+```
+console.error(
+    "JSON Load Error:",
+    error
+);
+```
+
 });
 
-/* Theme Save */
-
-const savedTheme =
-localStorage.getItem("theme");
+/* Theme */
 
 const themeToggle =
 document.getElementById("themeToggle");
+
+const savedTheme =
+localStorage.getItem("theme");
 
 if (savedTheme === "light") {
 
 ```
 document.body.classList.add("light");
 
-themeToggle.textContent = "☀️";
+themeToggle.textContent =
+    "☀️";
 ```
 
 }
@@ -72,17 +80,25 @@ themeToggle.textContent = "☀️";
 themeToggle.addEventListener("click", () => {
 
 ```
-document.body.classList.toggle("light");
+document.body.classList.toggle(
+    "light"
+);
 
 const isLight =
-    document.body.classList.contains("light");
+    document.body.classList.contains(
+        "light"
+    );
 
 themeToggle.textContent =
-    isLight ? "☀️" : "🌙";
+    isLight
+    ? "☀️"
+    : "🌙";
 
 localStorage.setItem(
     "theme",
-    isLight ? "light" : "dark"
+    isLight
+    ? "light"
+    : "dark"
 );
 ```
 
@@ -95,32 +111,49 @@ document
 .forEach(button => {
 
 ```
-button.addEventListener("click", () => {
+button.addEventListener(
+    "click",
+    () => {
 
-    document
-    .querySelectorAll(".tab-btn")
-    .forEach(btn =>
-        btn.classList.remove("active")
-    );
-
-    button.classList.add("active");
-
-    document
-    .querySelectorAll(".tab-content")
-    .forEach(tab =>
-        tab.classList.remove("active")
-    );
-
-    const target =
-        document.getElementById(
-            button.dataset.tab
+        document
+        .querySelectorAll(
+            ".tab-btn"
+        )
+        .forEach(btn =>
+            btn.classList.remove(
+                "active"
+            )
         );
 
-    if (target) {
-        target.classList.add("active");
-    }
+        button.classList.add(
+            "active"
+        );
 
-});
+        document
+        .querySelectorAll(
+            ".tab-content"
+        )
+        .forEach(tab =>
+            tab.classList.remove(
+                "active"
+            )
+        );
+
+        const target =
+            document.getElementById(
+                button.dataset.tab
+            );
+
+        if (target) {
+
+            target.classList.add(
+                "active"
+            );
+
+        }
+
+    }
+);
 ```
 
 });
