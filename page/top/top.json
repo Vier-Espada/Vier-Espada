@@ -1,0 +1,12 @@
+{
+    "guildName": "Vier Espada",
+    "banner": "banner.webp",
+    "icon": "icon.webp",
+
+    "socials": [
+        {
+            "name": "YouTube",
+            "url": "https://youtube.com/"
+        }
+    ]
+}
