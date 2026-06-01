@@ -1,23 +1,101 @@
-<header class="navbar">
+<!DOCTYPE html>
+<html lang="ja">
 
-    <div id="guildName" class="logo">
-        Vier Espada
-    </div>
+<head>
+    <meta charset="UTF-8">
 
-    <nav>
-        <a href="#">Members</a>
-        <a href="#">Gallery</a>
-        <a href="#">Events</a>
-    </nav>
+    <title>Vier Espada</title>
 
-    <div class="socials">
+    <link rel="stylesheet" href="./top.css">
+</head>
 
-        <a href="#">YouTube</a>
-        <a href="#">Discord</a>
-        <a href="#">X</a>
+<body>
 
-        <button id="themeToggle">🌙</button>
+    <!-- 固定ナビバー -->
+    <header class="navbar">
 
-    </div>
+        <div id="guildNameNav" class="logo">
+            Vier Espada
+        </div>
 
-</header>
+        <nav>
+            <button class="tab-btn" data-tab="main">Main</button>
+            <button class="tab-btn" data-tab="members">メンバー</button>
+            <button class="tab-btn" data-tab="gallery">ギャラリー</button>
+            <button class="tab-btn" data-tab="links">リンク</button>
+        </nav>
+
+        <div class="socials">
+
+            <a id="youtubeLink" target="_blank">YouTube</a>
+
+            <button id="themeToggle">🌙</button>
+
+        </div>
+
+    </header>
+
+    <!-- バナー -->
+    <section class="hero">
+        <img id="bannerImage" alt="Banner">
+    </section>
+
+    <!-- ギルド情報 -->
+    <section class="guild-profile">
+
+        <img id="guildIcon" alt="Guild Icon">
+
+        <h1 id="guildName"></h1>
+
+        <p id="guildDescription"></p>
+
+    </section>
+
+    <!-- Main -->
+    <section id="main" class="tab-content active">
+
+        <h2>Vier Espada</h2>
+
+        <p>
+            Chill Guild
+        </p>
+
+    </section>
+
+    <!-- Members -->
+    <section id="members" class="tab-content">
+
+        <h2>メンバー</h2>
+
+        <div id="memberList"></div>
+
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="tab-content">
+
+        <h2>ギャラリー</h2>
+
+        <p>Coming Soon...</p>
+
+    </section>
+
+    <!-- Links -->
+    <section id="links" class="tab-content">
+
+        <h2>リンク</h2>
+
+        <div class="link-list">
+
+            <a id="youtubeLink2" target="_blank">YouTube</a>
+
+
+        </div>
+
+    </section>
+
+    <script src="./top.js"></script>
+
+</body>
+
+</html>
