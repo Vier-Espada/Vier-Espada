@@ -1,10 +1,12 @@
+# top.html
+
+```html
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Vier Espada</title>
 
     <link rel="stylesheet" href="./top.css">
@@ -12,36 +14,30 @@
 
 <body>
 
-    <!-- 固定ナビバー -->
+    <!-- Navbar -->
     <header class="navbar">
 
         <div id="guildNameNav" class="logo">
             Vier Espada
         </div>
 
-        <nav>
-            <button class="tab-btn" data-tab="main">Main</button>
-            <button class="tab-btn" data-tab="members">メンバー</button>
-            <button class="tab-btn" data-tab="gallery">ギャラリー</button>
-            <button class="tab-btn" data-tab="links">リンク</button>
-        </nav>
-
         <div class="socials">
-
             <a id="youtubeLink" target="_blank">YouTube</a>
+            <a id="groupLink" target="_blank">Group</a>
 
-            <button id="themeToggle">🌙</button>
-
+            <button id="themeToggle">
+                🌙
+            </button>
         </div>
 
     </header>
 
-    <!-- バナー -->
+    <!-- Banner -->
     <section class="hero">
         <img id="bannerImage" alt="Banner">
     </section>
 
-    <!-- ギルド情報 -->
+    <!-- Guild Profile -->
     <section class="guild-profile">
 
         <img id="guildIcon" alt="Guild Icon">
@@ -52,13 +48,34 @@
 
     </section>
 
+    <!-- Tabs -->
+    <div class="content-tabs">
+
+        <button class="tab-btn active" data-tab="main">
+            Main
+        </button>
+
+        <button class="tab-btn" data-tab="members">
+            メンバー
+        </button>
+
+        <button class="tab-btn" data-tab="gallery">
+            ギャラリー
+        </button>
+
+        <button class="tab-btn" data-tab="links">
+            リンク
+        </button>
+
+    </div>
+
     <!-- Main -->
     <section id="main" class="tab-content active">
 
         <h2>Vier Espada</h2>
 
         <p>
-            Chill Guild
+            Project Aincrad Chill Guild.
         </p>
 
     </section>
@@ -88,8 +105,13 @@
 
         <div class="link-list">
 
-            <a id="youtubeLink2" target="_blank">YouTube</a>
+            <a id="youtubeLink2" target="_blank">
+                YouTube
+            </a>
 
+            <a id="groupLink2" target="_blank">
+                Group
+            </a>
 
         </div>
 
@@ -100,3 +122,4 @@
 </body>
 
 </html>
+```
