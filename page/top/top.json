@@ -1,26 +1,5 @@
 {
-  "guildName": "Vier Espada",
-
-  "description": "Project Aincrad Chill Guild",
-
-  "banner": "./assets/banner.png",
-  "icon": "./assets/icon.png",
-
-  "socials": {
-    "youtube": "https://youtube.com/",
-    "group": "https://vrchat.com/home/group/xxxxxxxx"
-  },
-
-  "members": [
-    {
-      "name": "雨宮＠黒い剣士",
-      "rank": "団長",
-      "icon": "./assets/members/leader.png"
-    },
-    {
-      "name": "96_mu",
-      "rank": "副団長",
-      "icon": "./assets/members/subleader.png"
-    }
-  ]
+  "guildName":"Vier Espada",
+  "youtube":"https://youtube.com",
+  "vrchat":"https://vrchat.com/home/group"
 }
