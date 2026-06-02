@@ -11,7 +11,7 @@ body{
     font-family:Arial,sans-serif;
 }
 
-
+/* スマホ縦持ち警告 */
 
 #rotateWarning{
     display:none;
@@ -23,44 +23,35 @@ body{
         display:flex;
         position:fixed;
         inset:0;
-
         z-index:9999;
-
         background:#000;
-
         justify-content:center;
         align-items:center;
-
         text-align:center;
-
         padding:20px;
-
         font-size:1.5rem;
     }
 
 }
 
-
+/* 16:9固定 */
 
 .game-screen{
 
     width:min(100vw,177.78vh);
-
     aspect-ratio:16/9;
 
     margin:auto;
 
     position:relative;
-
     overflow:hidden;
 }
 
-
+/* 背景 */
 
 .background{
 
     position:absolute;
-
     inset:0;
 
     background:
@@ -74,20 +65,18 @@ body{
     background-position:center;
 }
 
-
+/* 右側UI */
 
 .menu{
 
     position:absolute;
 
     top:50%;
-
     right:5%;
 
     transform:translateY(-50%);
 
     display:flex;
-
     flex-direction:column;
 
     align-items:flex-start;
@@ -95,17 +84,21 @@ body{
     z-index:10;
 }
 
-
+/* ギルド名 */
 
 .menu-title{
 
-    width:360px;
+    white-space:nowrap;
+
+    width:auto;
+
+    min-width:500px;
 
     text-align:left;
 
-    font-size:4rem;
+    font-size:3rem;
 
-    letter-spacing:6px;
+    letter-spacing:4px;
 
     margin-bottom:40px;
 
@@ -116,14 +109,13 @@ body{
         0 0 30px rgba(255,255,255,.4);
 }
 
-
+/* メニュー */
 
 .menuBtn{
 
-    width:360px;
+    width:500px;
 
     background:none;
-
     border:none;
 
     color:white;
@@ -141,8 +133,6 @@ body{
     transition:.25s;
 }
 
-
-
 .menuBtn:hover{
 
     transform:translateX(12px);
@@ -152,7 +142,7 @@ body{
         0 0 25px white;
 }
 
-
+/* リンク */
 
 .links{
 
@@ -180,11 +170,11 @@ body{
         0 0 10px white;
 }
 
-
+/* フェードイン */
 
 .menu{
 
-    animation:fadeIn 0.8s ease;
+    animation:fadeIn .8s ease;
 }
 
 @keyframes fadeIn{
@@ -198,9 +188,10 @@ body{
         opacity:1;
         transform:translateY(-50%) translateX(0);
     }
+
 }
 
-
+/* スマホ横画面 */
 
 @media(max-width:900px){
 
@@ -211,7 +202,7 @@ body{
 
     .menu-title{
 
-        width:260px;
+        min-width:320px;
 
         font-size:2rem;
 
@@ -220,7 +211,7 @@ body{
 
     .menuBtn{
 
-        width:260px;
+        width:320px;
 
         font-size:1rem;
     }
@@ -231,4 +222,5 @@ body{
 
         gap:10px;
     }
+
 }
