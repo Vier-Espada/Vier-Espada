@@ -11,45 +11,54 @@ body{
     font-family:Arial,sans-serif;
 }
 
-/* スマホ縦持ち警告 */
+/* スマホ縦向き */
 
 #rotateWarning{
     display:none;
 }
 
-@media (orientation: portrait){
+@media (orientation:portrait){
 
     #rotateWarning{
         display:flex;
         position:fixed;
         inset:0;
         z-index:9999;
+
         background:#000;
+
         justify-content:center;
         align-items:center;
+
         text-align:center;
-        padding:20px;
+
         font-size:1.5rem;
+        padding:20px;
     }
 
 }
 
-/* 16:9固定 */
+/* 16:9 */
 
 .game-screen{
+
     width:min(100vw,177.78vh);
+
     aspect-ratio:16/9;
 
     margin:auto;
 
     position:relative;
+
     overflow:hidden;
 }
 
 /* 背景 */
 
 .background{
+
     position:absolute;
+
     inset:0;
 
     background:
@@ -63,18 +72,20 @@ body{
     background-position:center;
 }
 
-/* 右側UI全体 */
+/* メニュー全体 */
 
 .menu{
 
     position:absolute;
 
     top:50%;
-    right:8%;
+
+    right:3%;
 
     transform:translateY(-50%);
 
     display:flex;
+
     flex-direction:column;
 
     align-items:flex-start;
@@ -84,19 +95,15 @@ body{
     animation:fadeIn .8s ease;
 }
 
-/* ギルド名 */
+/* タイトル */
 
 .menu-title{
 
-    width:500px;
-
     white-space:nowrap;
-
-    text-align:left;
 
     font-size:3rem;
 
-    font-weight:700;
+    font-weight:bold;
 
     letter-spacing:4px;
 
@@ -111,9 +118,10 @@ body{
 
 .menuBtn{
 
-    width:500px;
+    width:320px;
 
     background:none;
+
     border:none;
 
     color:white;
@@ -122,7 +130,7 @@ body{
 
     cursor:pointer;
 
-    padding:12px 0;
+    padding:10px 0;
 
     font-size:1.5rem;
 
@@ -133,7 +141,7 @@ body{
 
 .menuBtn:hover{
 
-    transform:translateX(12px);
+    transform:translateX(10px);
 
     text-shadow:
         0 0 10px white,
@@ -144,13 +152,11 @@ body{
 
 .links{
 
-    width:500px;
-
-    margin-top:50px;
+    margin-top:40px;
 
     display:flex;
 
-    gap:25px;
+    gap:20px;
 }
 
 .links a{
@@ -158,8 +164,6 @@ body{
     color:white;
 
     text-decoration:none;
-
-    font-size:1rem;
 
     transition:.25s;
 }
@@ -170,7 +174,7 @@ body{
         0 0 10px white;
 }
 
-/* フェードイン */
+/* アニメーション */
 
 @keyframes fadeIn{
 
@@ -186,33 +190,28 @@ body{
 
 }
 
-/* スマホ横画面 */
+/* スマホ横向き */
 
 @media(max-width:900px){
 
     .menu{
-        right:4%;
+
+        right:2%;
     }
 
     .menu-title{
 
-        width:320px;
-
         font-size:2rem;
-
-        letter-spacing:3px;
     }
 
     .menuBtn{
 
-        width:320px;
+        width:240px;
 
         font-size:1rem;
     }
 
     .links{
-
-        width:320px;
 
         flex-direction:column;
 
