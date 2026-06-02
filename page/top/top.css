@@ -52,7 +52,7 @@ body{
         rgba(0,0,0,.10),
         rgba(0,0,0,.35)
     ),
-    url("../../assets/banner.png");
+    url("../../assets/topbanner.png");
 
     background-size:cover;
     background-position:center;
