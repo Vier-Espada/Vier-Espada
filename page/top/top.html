@@ -1,125 +1,65 @@
-# top.html
-
-```html
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vier Espada</title>
 
-    <link rel="stylesheet" href="./top.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vier Espada</title>
+
+<link rel="stylesheet" href="top.css">
+
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
+<div id="rotateWarning">
+    横向きでご利用ください
+</div>
 
-        <div id="guildNameNav" class="logo">
+<div class="game-screen">
+
+    <div class="background"></div>
+
+    <div class="menu">
+
+        <h1 id="guildName">
             Vier Espada
-        </div>
+        </h1>
 
-        <div class="socials">
-            <a id="youtubeLink" target="_blank">YouTube</a>
-            <a id="groupLink" target="_blank">Group</a>
-
-            <button id="themeToggle">
-                🌙
-            </button>
-        </div>
-
-    </header>
-
-    <!-- Banner -->
-    <section class="hero">
-        <img id="bannerImage" alt="Banner">
-    </section>
-
-    <!-- Guild Profile -->
-    <section class="guild-profile">
-
-        <img id="guildIcon" alt="Guild Icon">
-
-        <h1 id="guildName"></h1>
-
-        <p id="guildDescription"></p>
-
-    </section>
-
-    <!-- Tabs -->
-    <div class="content-tabs">
-
-        <button class="tab-btn active" data-tab="main">
-            Main
-        </button>
-
-        <button class="tab-btn" data-tab="members">
+        <button class="menuBtn">
             メンバー
         </button>
 
-        <button class="tab-btn" data-tab="gallery">
-            ギャラリー
+        <button class="menuBtn">
+            写真・動画
         </button>
 
-        <button class="tab-btn" data-tab="links">
-            リンク
+        <button class="menuBtn">
+            Vier Espada特集
         </button>
 
-    </div>
+        <button class="menuBtn">
+            ABOUT
+        </button>
 
-    <!-- Main -->
-    <section id="main" class="tab-content active">
+        <div class="links">
 
-        <h2>Vier Espada</h2>
-
-        <p>
-            Project Aincrad Chill Guild.
-        </p>
-
-    </section>
-
-    <!-- Members -->
-    <section id="members" class="tab-content">
-
-        <h2>メンバー</h2>
-
-        <div id="memberList"></div>
-
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="tab-content">
-
-        <h2>ギャラリー</h2>
-
-        <p>Coming Soon...</p>
-
-    </section>
-
-    <!-- Links -->
-    <section id="links" class="tab-content">
-
-        <h2>リンク</h2>
-
-        <div class="link-list">
-
-            <a id="youtubeLink2" target="_blank">
+            <a id="youtubeLink" target="_blank">
                 YouTube
             </a>
 
-            <a id="groupLink2" target="_blank">
-                Group
+            <a id="vrchatLink" target="_blank">
+                VRChat Group
             </a>
 
         </div>
 
-    </section>
+    </div>
 
-    <script src="./top.js"></script>
+</div>
+
+<script src="top.js"></script>
 
 </body>
-
 </html>
-```
