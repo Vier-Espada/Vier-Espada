@@ -219,3 +219,18 @@ body{
     }
 
 }
+
+@media (max-width: 900px) and (orientation: landscape){
+
+    .game-screen{
+        width:100vw;
+        height:100vh;
+        aspect-ratio:auto;
+        transform:scale(0.9);
+        transform-origin:center;
+    }
+
+    .background{
+        height:100%;
+    }
+}
