@@ -101,10 +101,11 @@ body{
 }
 
 /* =========================
-   左上リンク
+   左上ロゴリンク
 ========================= */
 
 .links{
+
     position:absolute;
 
     top:20px;
@@ -119,10 +120,13 @@ body{
 
 .links a{
 
-    color:white;
-    text-decoration:none;
+    width:56px;
+    height:56px;
 
-    padding:8px 16px;
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
 
     background:rgba(0,0,0,.35);
 
@@ -130,22 +134,30 @@ body{
 
     backdrop-filter:blur(6px);
 
-    border-radius:6px;
+    border-radius:10px;
 
     transition:.25s;
 }
 
-.links a:hover{
+.links img{
 
-    transform:translateY(-2px);
+    width:36px;
+    height:36px;
 
-    text-shadow:0 0 10px white;
+    object-fit:contain;
 
-    border-color:rgba(255,255,255,.8);
-
-    box-shadow:0 0 10px rgba(255,255,255,.2);
+    pointer-events:none;
 }
 
+.links a:hover{
+
+    transform:translateY(-3px);
+
+    border-color:white;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.3);
+}
 /* fadeアニメ */
 @keyframes fadeIn{
     from{
@@ -193,7 +205,21 @@ body{
         height:100%;
     }
 }
+.links{
+    top:10px;
+    left:10px;
+    gap:8px;
+}
 
+.links a{
+    width:48px;
+    height:48px;
+}
+
+.links img{
+    width:30px;
+    height:30px;
+}
 /* =========================
    左下スクロールUI
 ========================= */
