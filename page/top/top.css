@@ -292,3 +292,13 @@ body{
         max-width:130px;
     }
 }
+@media (max-width:900px){
+
+    .background{
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:center;
+        background-color:#000;
+    }
+
+}
