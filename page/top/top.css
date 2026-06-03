@@ -299,3 +299,34 @@ body{
         height:90px;
     }
 }
+
+/* 拡大表示背景 */
+.lightbox{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+/* 拡大画像 */
+.lightbox img{
+
+    max-width:80vw;
+    max-height:80vh;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+
+/* 表示状態 */
+.lightbox.show{
+    display:flex;
+}
