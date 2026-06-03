@@ -11,37 +11,27 @@ body{
     font-family:Arial,sans-serif;
 }
 
-/* スマホ縦向き */
-
 #rotateWarning{
     display:none;
 }
 
 @media (orientation:portrait){
-
     #rotateWarning{
         display:flex;
         position:fixed;
         inset:0;
         z-index:9999;
-
         background:#000;
-
         justify-content:center;
         align-items:center;
-
         text-align:center;
-
         font-size:1.5rem;
         padding:20px;
     }
-
 }
 
-/* 16:9 */
-
+/* 16:9画面 */
 .game-screen{
-
     width:min(100vw,177.78vh);
     aspect-ratio:16/9;
     margin:auto;
@@ -50,142 +40,92 @@ body{
 }
 
 /* 背景 */
-
 .background{
-
     position:absolute;
     inset:0;
-
     background:
-    linear-gradient(
-        rgba(0,0,0,.10),
-        rgba(0,0,0,.35)
-    ),
+    linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.35)),
     url("../../assets/topbanner.png");
-
     background-size:cover;
     background-position:center;
 }
 
 /* メニュー */
-
 .menu{
-
     position:absolute;
-
     top:50%;
     right:3%;
-
     transform:translateY(-50%);
-
     display:flex;
     flex-direction:column;
-
     align-items:flex-start;
-
     z-index:10;
-
-    animation:fadeIn .8s ease;
+    animation:fadeIn .6s ease;
 }
 
 /* タイトル */
-
 .menu-title{
-
     white-space:nowrap;
-
     font-size:3rem;
-
     font-weight:bold;
-
     letter-spacing:4px;
-
     margin-bottom:40px;
-
-    text-shadow:
-        0 0 10px rgba(255,255,255,.8),
-        0 0 30px rgba(255,255,255,.4);
+    text-shadow:0 0 10px rgba(255,255,255,.8),
+                0 0 30px rgba(255,255,255,.4);
 }
 
 /* ボタン */
-
 .menuBtn{
-
     width:320px;
-
     background:none;
     border:none;
-
     color:white;
-
     text-align:left;
-
     cursor:pointer;
-
     padding:10px 0;
-
     font-size:1.5rem;
-
     letter-spacing:2px;
-
     transition:.25s;
 }
 
+/* hover選択感 */
 .menuBtn:hover{
-
     transform:translateX(10px);
-
-    text-shadow:
-        0 0 10px white,
-        0 0 25px white;
+    text-shadow:0 0 10px white,
+                0 0 25px white;
 }
 
 /* リンク */
-
 .links{
-
     margin-top:40px;
-
     display:flex;
-
     gap:20px;
 }
 
 .links a{
-
     color:white;
-
     text-decoration:none;
-
     transition:.25s;
 }
 
 .links a:hover{
-
-    text-shadow:
-        0 0 10px white;
+    text-shadow:0 0 10px white;
 }
 
-/* アニメーション */
-
+/* fade */
 @keyframes fadeIn{
-
     from{
         opacity:0;
         transform:translateY(-50%) translateX(30px);
     }
-
     to{
         opacity:1;
         transform:translateY(-50%) translateX(0);
     }
-
 }
 
-/* スマホ横 */
-
+/* スマホ */
 @media(max-width:900px){
-
     .menu{
         right:2%;
     }
@@ -203,90 +143,93 @@ body{
         flex-direction:column;
         gap:10px;
     }
-
 }
 
-/* 横スマホ対応 */
-
-@media (max-width: 900px) and (orientation: landscape){
-
-    .game-screen{
-        width:100vw;
-        height:100vh;
-        aspect-ratio:auto;
-        transform:scale(0.9);
-        transform-origin:center;
-    }
-
-    .background{
-        height:100%;
-    }
-}
-
-/* 🔽 左下スクロールUI */
-
+/* 左下スクロール */
 .scrollPanel{
-
     position:absolute;
-
     left:20px;
     bottom:20px;
-
     width:280px;
     height:110px;
-
     overflow:hidden;
-
     border:1px solid rgba(255,255,255,.2);
-
     background:rgba(0,0,0,.35);
-
     backdrop-filter:blur(6px);
-
     z-index:5;
-
     box-shadow:0 0 15px rgba(255,255,255,.08);
 }
 
 .scrollTrack{
-
     display:flex;
     width:max-content;
     animation:scrollLoop 14s linear infinite;
 }
 
 .scrollTrack img{
-
     width:110px;
     height:110px;
-
     object-fit:cover;
-
     flex-shrink:0;
-
-    filter:brightness(0.85);
-
+    filter:brightness(.85);
     transition:.3s;
 }
 
+/* ③ズーム演出 */
 .scrollTrack img:hover{
-    filter:brightness(1.1);
+    cursor:pointer;
     transform:scale(1.05);
+    filter:brightness(1.1);
+    outline:2px solid white;
 }
 
+/* 無限スクロール */
 @keyframes scrollLoop{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
 
-    0%{
-        transform:translateX(0);
+/* 拡大表示 */
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fade .2s ease;
+}
+
+.lightbox img{
+    max-width:80vw;
+    max-height:80vh;
+    box-shadow:0 0 30px rgba(255,255,255,.2);
+    animation:zoomIn .2s ease;
+}
+
+.lightbox.show{
+    display:flex;
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.8);
+        opacity:0;
     }
-
-    100%{
-        transform:translateX(-50%);
+    to{
+        transform:scale(1);
+        opacity:1;
     }
 }
 
+/* スマホ調整 */
 @media(max-width:900px){
-
     .scrollPanel{
         width:200px;
         height:90px;
@@ -298,35 +241,4 @@ body{
         width:90px;
         height:90px;
     }
-}
-
-/* 拡大表示背景 */
-.lightbox{
-
-    position:fixed;
-    inset:0;
-
-    background:rgba(0,0,0,.85);
-
-    display:none;
-    justify-content:center;
-    align-items:center;
-
-    z-index:9999;
-}
-
-/* 拡大画像 */
-.lightbox img{
-
-    max-width:80vw;
-    max-height:80vh;
-
-    border:1px solid rgba(255,255,255,.3);
-
-    box-shadow:0 0 30px rgba(255,255,255,.2);
-}
-
-/* 表示状態 */
-.lightbox.show{
-    display:flex;
 }
