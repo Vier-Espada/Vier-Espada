@@ -30,6 +30,7 @@ body{
     z-index:-1;
 }
 
+
 /* 戻るボタン */
 
 .backBtn{
@@ -262,19 +263,14 @@ body{
     color:white;
 }
 /* スマホ */
+@media (max-width:900px){
 
-@media(max-width:900px){
+    .background{
 
-    .memberGrid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-        gap:15px;
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:center;
+        background-color:#000;
     }
 
-    .memberContainer{
-
-        width:95vw;
-    }
 }
