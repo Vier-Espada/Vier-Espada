@@ -1,30 +1,34 @@
 {
-    "name":"雨宮＠黒い剣士",
-    "role":"団長",
-    "image":"../../assets/member/amamiya.png"
-},
-{
-    "name":"96_mu",
-    "role":"副団長",
-    "image":"../../assets/member/96_mu.png"
-},
-{
-    "name":"MiMi",
-    "role":"♤隊エース",
-    "image":"../../assets/member/mimi.png"
-},
-{
-    "name":"ぐみぐみん",
-    "role":"♡隊エース",
-    "image":"../../assets/member/gumi.png"
-},
-{
-    "name":"タキ",
-    "role":"♧隊エース",
-    "image":"../../assets/member/taki.png"
-},
-{
-    "name":"野良雲さざなみ",
-    "role":"♢隊エース",
-    "image":"../../assets/member/norakumo.png"
+    "members":[
+        {
+            "name":"雨宮＠黒い剣士",
+            "role":"団長",
+            "image":"../../assets/member/amamiya.png"
+        },
+        {
+            "name":"96_mu",
+            "role":"副団長",
+            "image":"../../assets/member/96_mu.png"
+        },
+        {
+            "name":"MiMi",
+            "role":"♤隊エース",
+            "image":"../../assets/member/mimi.png"
+        },
+        {
+            "name":"ぐみぐみん",
+            "role":"♡隊エース",
+            "image":"../../assets/member/gumi.png"
+        },
+        {
+            "name":"タキ",
+            "role":"♧隊エース",
+            "image":"../../assets/member/taki.png"
+        },
+        {
+            "name":"野良雲さざなみ",
+            "role":"♢隊エース",
+            "image":"../../assets/member/norakumo.png"
+        }
+    ]
 }
