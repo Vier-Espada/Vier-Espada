@@ -16,9 +16,24 @@
             "image":"../../assets/member/mimi.png"
         },
         {
+            "name":"_Shiatya_",
+            "role":"♤隊メンバー",
+            "image":"../../assets/member/shiatya.png"
+        },
+        {
             "name":"ぐみぐみん",
             "role":"♡隊エース",
             "image":"../../assets/member/gumi.png"
+        },
+         {
+            "name":"あずとら",
+            "role":"♡隊メンバー",
+            "image":"../../assets/member/azutora.png"
+        },
+        {
+            "name":"homa",
+            "role":"♡隊メンバー",
+            "image":"../../assets/member/homa.png"
         },
         {
             "name":"タキ",
@@ -26,9 +41,29 @@
             "image":"../../assets/member/taki.png"
         },
         {
+            "name":"Saku",
+            "role":"♧隊メンバー",
+            "image":"../../assets/member/saku.png"
+        },
+        {
+            "name":"M.kazu",
+            "role":"♧隊メンバー",
+            "image":"../../assets/member/kazu.png"
+        },
+        {
+            "name":"Rinaliy",
+            "role":"♧隊メンバー",
+            "image":"../../assets/member/rina.png"
+        },
+        {
             "name":"野良雲さざなみ",
             "role":"♢隊エース",
             "image":"../../assets/member/norakumo.png"
+        },
+         {
+            "name":"shelly",
+            "role":"♢隊メンバー",
+            "image":"../../assets/member/shelly.png"
         }
     ]
 }
