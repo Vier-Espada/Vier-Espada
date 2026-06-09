@@ -1,19 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+/* 背景 */
+
+.background{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.45)
+    ),
+    url("../../assets/topbanner.png");
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:-1;
+}
+
+/* 戻るボタン */
+
+.backBtn{
+
+    position:fixed;
+
+    top:20px;
+    left:20px;
+
+    z-index:100;
+
+    color:white;
+
+    text-decoration:none;
+
+    background:rgba(0,0,0,.4);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(6px);
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    transition:.25s;
+}
+
+.backBtn:hover{
+
+    border-color:white;
+
+    text-shadow:0 0 10px white;
+}
+
+/* スクロールエリア */
+
+.memberContainer{
+
+    position:absolute;
+
+    top:80px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(1400px,92vw);
+
+    height:calc(100vh - 100px);
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding:20px;
+}
+
+/* スクロールバー */
+
+.memberContainer::-webkit-scrollbar{
+    width:8px;
+}
+
+.memberContainer::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.3);
+    border-radius:20px;
+}
+
+/* メンバー一覧 */
+
 .memberGrid{
 
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fill,minmax(180px,1fr));
+    repeat(auto-fill,minmax(220px,1fr));
 
-    gap:30px;
-
-    padding:40px;
+    gap:25px;
 }
+
+/* カード */
 
 .memberCard{
 
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:12px;
+
+    padding:15px;
+
     text-align:center;
+
+    transition:.25s;
 }
+
+.memberCard:hover{
+
+    transform:translateY(-5px);
+
+    border-color:white;
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,.15);
+}
+
+/* アイコン */
 
 .memberCard img{
 
@@ -25,21 +150,66 @@
 
     border-radius:10px;
 
-    border:1px solid rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.1);
 }
+
+/* 名前 */
 
 .memberName{
 
-    margin-top:10px;
+    margin-top:12px;
 
     font-size:1rem;
+
+    font-weight:bold;
 }
+
+/* 役職 */
 
 .memberRole{
 
-    margin-top:5px;
-
-    font-weight:bold;
+    margin-top:6px;
 
     font-size:.95rem;
+
+    font-weight:bold;
+}
+
+/* 役職色 */
+
+.role-団長{
+    color:#ffd700;
+    text-shadow:0 0 10px #ffd700;
+}
+
+.role-副団長{
+    color:#00d4ff;
+    text-shadow:0 0 10px #00d4ff;
+}
+
+.role-幹部{
+    color:#ff6666;
+    text-shadow:0 0 10px #ff6666;
+}
+
+.role-メンバー{
+    color:white;
+}
+
+/* スマホ */
+
+@media(max-width:900px){
+
+    .memberGrid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:15px;
+    }
+
+    .memberContainer{
+
+        width:95vw;
+    }
 }
