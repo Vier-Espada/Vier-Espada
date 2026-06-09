@@ -175,27 +175,77 @@ body{
     font-weight:bold;
 }
 
-/* 役職色 */
+/* =========================
+   役職カラー
+========================= */
 
+/* 団長 - 紫 */
 .role-団長{
-    color:#ffd700;
-    text-shadow:0 0 10px #ffd700;
+    color:#b266ff;
+
+    text-shadow:
+        0 0 8px #b266ff,
+        0 0 20px #7a00ff,
+        0 0 35px #7a00ff;
 }
 
+/* 副団長 - 青と水色の中間 */
 .role-副団長{
-    color:#00d4ff;
-    text-shadow:0 0 10px #00d4ff;
+    color:#4db8ff;
+
+    text-shadow:
+        0 0 8px #4db8ff,
+        0 0 20px #0099ff,
+        0 0 35px #0099ff;
 }
 
-.role-幹部{
-    color:#ff6666;
-    text-shadow:0 0 10px #ff6666;
+/* ♤隊エース - 青 */
+.role-♤隊エース{
+    color:#3f6cff;
+
+    text-shadow:
+        0 0 8px #3f6cff,
+        0 0 20px #003cff,
+        0 0 35px #003cff;
 }
 
+/* ♡隊エース - 赤ピンク */
+.role-♡隊エース{
+    color:#ff5c8a;
+
+    text-shadow:
+        0 0 8px #ff5c8a,
+        0 0 20px #ff0055,
+        0 0 35px #ff0055;
+}
+
+/* ♧隊エース - 緑 */
+.role-♧隊エース{
+    color:#4dff88;
+
+    text-shadow:
+        0 0 8px #4dff88,
+        0 0 20px #00cc44,
+        0 0 35px #00cc44;
+}
+
+/* ♢隊エース - 水色 */
+.role-♢隊エース{
+    color:#7df9ff;
+
+    text-shadow:
+        0 0 8px #7df9ff,
+        0 0 20px #00d4ff,
+        0 0 35px #00d4ff;
+}
+
+/* 一般メンバー */
 .role-メンバー{
     color:white;
-}
 
+    text-shadow:
+        0 0 5px rgba(255,255,255,.5);
+}
 /* スマホ */
 
 @media(max-width:900px){
